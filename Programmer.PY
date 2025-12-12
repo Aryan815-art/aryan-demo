@@ -1,3 +1,4 @@
+#aryan.demo
 def menu():
     print("\n========== PROGRAMMER CALCULATOR ==========")
     print("1. Decimal to Binary")

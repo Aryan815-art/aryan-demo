@@ -4,11 +4,13 @@ from tkinter import simpledialog, messagebox
 root = tk.Tk()
 root.withdraw()   # Hide main screen
 
+
 # 1. Movie Name
 movie = simpledialog.askstring("Movie Name", "Enter Movie Name:")
 if not movie:
     messagebox.showwarning("Warning", "Movie name is required!")
     exit()
+
 
 # 2. Runtime (HH:MM)
 time_input = simpledialog.askstring("Runtime", "Enter Runtime (HH:MM):")
@@ -33,17 +35,20 @@ if budget is None:
     messagebox.showwarning("Warning", "Budget is required!")
     exit()
 
+
 # 4. Collection
 collection = simpledialog.askinteger("Collection", "Enter Box Office Collection (₹):")
 if collection is None:
     messagebox.showwarning("Warning", "Collection is required!")
     exit()
 
+
 # 5. Music Director Name
 music_director = simpledialog.askstring("Music Director", "Enter Music Director Name:")
 if not music_director:
     messagebox.showwarning("Warning", "Music Director is required!")
     exit()
+
 
 # -------------------------
 # ⭐ HIT / SUPER HIT LOGIC
@@ -59,6 +64,7 @@ elif collection >= budget * 1.50:
     status = "Hit"
 else:
     status = "Average"
+
 
 # Final Summary Message
 messagebox.showinfo(
